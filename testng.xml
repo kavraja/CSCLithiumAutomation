@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="1" preserve-order="true"
+	group-by-instances="true">
+
+	
+	<parameter name="env" value="UAT"></parameter>
+	
+	<parameter name="retry" value="0"></parameter>
+
+	<listeners>
+		<listener class-name="com.cisco.csc.genericLib.MethodOrderExecutor" />
+		<listener class-name="com.cisco.csc.genericLib.RetryListener" />
+	</listeners>
+
+	<!-- Test cases : Please comment out the test case which you want to run -->
+
+
+
+	<test name="Home Page" preserve-order="true" group-by-instances="true">
+		<parameter name="browser" value="chrome" />
+		<parameter name="proxy" value="false"></parameter>
+		<classes>
+			<class name="com.cisco.csc.testscripts.HomeTest" />
+		</classes>
+	</test> 
+
+
+</suite> <!-- Suite -->
+
